@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CyberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/form',[CyberController::class,'Form'])->name('Form');
+Route::get('/consulta',[Consulta::class,'Consulta'])->name('Consulta');
+
+
+
